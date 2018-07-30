@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xdsb:RetrieveDocumentSetRequest xmlns:xdsb="urn:ihe:iti:xds-b:2007" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:ihe:iti:xds-b:2007 ../schema/IHE/XDS.b_DocumentRepository.xsd">
+  <xdsb:DocumentRequest>
+    <xdsb:RepositoryUniqueId>1.3.6.1.4.1.21367.2010.1.2.1125</xdsb:RepositoryUniqueId>
+    <xdsb:DocumentUniqueId>2.16.840.1.113883.3.65.2.1488567171332</xdsb:DocumentUniqueId>
+  </xdsb:DocumentRequest>
+</xdsb:RetrieveDocumentSetRequest>

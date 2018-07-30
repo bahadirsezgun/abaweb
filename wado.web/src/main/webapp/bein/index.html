@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0, minimal-ui">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="BEINPlanner">
+<!-- Page title -->
+<title> BEINPlanner</title>
+
+<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+<link rel="icon" type="image/png"
+	href="/wado/jslib/img/logos/abasus-ico.png" />
+
+
+<link href="/wado/jslib/lib/print/ngPrint/ngPrint.min.css">
+<!-- Vendor styles -->
+<link rel="stylesheet" href="/wado/homerlib/vendor/fontawesome/css/font-awesome.css" />
+<link rel="stylesheet" 	href="/wado/homerlib/vendor/metisMenu/dist/metisMenu.css" />
+
+<link rel="stylesheet" href="/wado/homerlib/vendor/animate.css/animate.css" />
+<link rel="stylesheet" href="/wado/homerlib/vendor/bootstrap/dist/css/bootstrap.css" />
+<link rel="stylesheet" href="/wado/homerlib/vendor/fooTable/css/footable.core.min.css" />
+<link rel="stylesheet" href="/wado/homerlib/vendor/sweetalert/lib/sweet-alert.css" />
+<link rel="stylesheet" href="/wado/homerlib/vendor/toastr/build/toastr.min.css" />
+
+<link rel="stylesheet" href="/wado/homerlib/vendor/select2-3.5.2/select2.css" />
+<link rel="stylesheet" href="/wado/homerlib/vendor/select2-bootstrap/select2-bootstrap.css" />
+<link rel="stylesheet" href="/wado/homerlib/vendor/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.css" />
+<link rel="stylesheet" href="/wado/homerlib/vendor/bootstrap-datepicker-master/dist/css/bootstrap-datepicker3.min.css" />
+<link rel="stylesheet" href="/wado/homerlib/vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" />
+<link rel="stylesheet" href="/wado/homerlib/vendor/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" />
+<!-- <link rel="stylesheet" href="/wado/homerlib/vendor/summernote/dist/summernote.css" />
+<link rel="stylesheet" href="/wado/homerlib/vendor/summernote/dist/summernote-bs3.css" />
+<link rel="stylesheet" href="/wado/homerlib/vendor/bootstrap-tour/build/css/bootstrap-tour.min.css" /> -->
+<!-- App styles -->
+<link rel="stylesheet" href="/wado/homerlib/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css" />
+<link rel="stylesheet" href="/wado/homerlib/fonts/pe-icon-7-stroke/css/helper.css" />
+<link rel="stylesheet" href="/wado/homerlib/styles/static_custom.css">
+<link rel="stylesheet" href="/wado/homerlib/styles/style.css">
+
+
+
+</head>
+<body class="fixed-navbar fixed-sidebar fixed-footer"
+	data-ng-module="PTBossApp as ptBossApp" ng-controller="IndexController as ic" ng-init="init">
+
+	<!-- Simple splash screen-->
+	<div class="splash">
+		<div class="color-line"></div>
+		<div class="splash-title">
+			<h1>ABASUS - BEINPlanner</h1>
+			<p>You will be 10x productive than before by this app</p>
+			<div class="spinner">
+				<div class="rect1"></div>
+				<div class="rect2"></div>
+				<div class="rect3"></div>
+				<div class="rect4"></div>
+				<div class="rect5"></div>
+			</div>
+		</div>
+	</div>
+	<!--[if lt IE 7]>
+<p class="alert alert-danger">You are using an <strong>outdated</strong> browser. Please <a href="http:/browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+
+	<!-- Header -->
+	<!-- <ng-include src="'/bein/menu/header.html'"></ng-include> -->
+
+
+
+	<!-- Navigation -->
+	<!-- <ng-include src="'/bein/menu/menu.html'"></ng-include> -->
+
+
+
+
+
+	<!-- Main Wrapper -->
+	<div id="wrapper">
+
+		
+
+
+
+		<div class="content animate-panel" data-ng-view></div>
+
+
+
+		<!-- Footer-->
+		<footer class="footer hidden-xs" >
+			<span class="pull-right"> {{'appName' | translate}}</strong> -
+				{{'appNameTitle' | translate}}
+			</span> 2010 Copyright by BEINPlanner
+		</footer>
+
+	</div>
+
+	<!-- Vendor scripts -->
+	<script src="/wado/homerlib/vendor/jquery/dist/jquery.min.js"></script>
+	<script src="/wado/homerlib/vendor/jquery-ui/jquery-ui.min.js"></script>
+	<script src="/wado/homerlib/vendor/slimScroll/jquery.slimscroll.min.js"></script>
+	<script src="/wado/homerlib/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="/wado/homerlib/vendor/jquery-flot/jquery.flot.js"></script>
+	<script src="/wado/homerlib/vendor/jquery-flot/jquery.flot.resize.js"></script>
+	<script src="/wado/homerlib/vendor/jquery-flot/jquery.flot.pie.js"></script>
+	<script src="/wado/homerlib/vendor/flot.curvedlines/curvedLines.js"></script>
+	<script src="/wado/homerlib/vendor/jquery.flot.spline/index.js"></script>
+	<script src="/wado/homerlib/vendor/metisMenu/dist/metisMenu.min.js"></script>
+	
+	<script src="/wado/homerlib/vendor/peity/jquery.peity.min.js"></script>
+	<script src="/wado/homerlib/vendor/sparkline/index.js"></script>
+
+	<script src="/wado/homerlib/vendor/nestable/jquery.nestable.js"></script>
+
+
+	<script src="/wado/homerlib/vendor/moment/moment.js"></script>
+	<script
+		src="/wado/homerlib/vendor/xeditable/bootstrap3-editable/js/bootstrap-editable.min.js"></script>
+	<script src="/wado/homerlib/vendor/select2-3.5.2/select2.min.js"></script>
+	<script
+		src="/wado/homerlib/vendor/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js"></script>
+	<script
+		src="/wado/homerlib/vendor/bootstrap-datepicker-master/dist/js/bootstrap-datepicker.min.js"></script>
+	<script
+		src="/wado/homerlib/vendor/bootstrap-datepicker-master/dist/locales/bootstrap-datepicker.tr.min.js"></script>
+	<script
+		src="/wado/homerlib/vendor/bootstrap-datepicker-master/dist/locales/bootstrap-datepicker.de.min.js"></script>
+	<script
+		src="/wado/homerlib/vendor/bootstrap-datepicker-master/dist/locales/bootstrap-datepicker.fr.min.js"></script>
+
+
+	<script
+		src="/wado/homerlib/vendor/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+	<script src="/wado/homerlib/vendor/sweetalert/lib/sweet-alert.min.js"></script>
+	<script src="/wado/homerlib/vendor/toastr/build/toastr.min.js"></script>
+	<script src="/wado/homerlib/vendor/chartjs/Chart.min.js"></script>
+	
+	<!-- App scripts -->
+	<script src="/wado/homerlib/scripts/homer.js"></script>
+	<!-- <script src="/wado/homerlib/scripts/charts.js"></script>-->
+
+	<script src="/wado/homerlib/vendor/mask/jquery.maskedinput.min.js"></script>
+	<script src="/wado/homerlib/vendor/mask/jquery.maskMoney.min.js"></script>
+
+
+    <script src="/wado/homerlib/vendor/iCheck/icheck.min.js"></script>
+
+	<script data-main="/wado/app/main/main.js"
+		src="/wado/jslib/lib/require/require.js"></script>
+
+
+
+</body>
+</html>

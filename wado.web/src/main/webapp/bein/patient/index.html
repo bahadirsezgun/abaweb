@@ -1,0 +1,117 @@
+<meta charset="utf-8">
+<div class=" animate zoomIn"
+	ng-controller="PatientController as ufc" ng-init="init()">
+	<section ng-show="showQuery">
+		<div class="row register-container">
+			<div class="hpanel">
+				<div class="panel-heading hbuilt">
+					<div class="text-center m-b-md">
+						<h3>{{'findPotentialMember' | translate}}</h3>
+						<small>{{'findPotentialMemberComment' | translate}}</small>
+					</div>
+				</div>
+					<div class="panel-body">
+						<form>
+							<div class="row">
+								<div class="form-group col-lg-6">
+									<label>Protokol No</label> <input type="text"
+										value="" id="" class="form-control" autocomplete="off" name=""
+										ng-model="patId">
+								</div>
+								
+
+							</div>
+							<div class="text-center">
+								<button type="button" class="btn btn-success" ng-click="findPatientById()">Protokol No İle Bul</button>
+							</div>
+						</form>
+						
+						<form>
+							<div class="row">
+								<div class="form-group col-lg-6">
+									<label>Başlama tarihi</label> <input type="date"
+										value="" id="" class="form-control" autocomplete="off" name=""
+										ng-model="startTime">
+								</div>
+								<div class="form-group col-lg-6">
+									<label>Bitiş Tarihi</label> <input type="date"
+										value="" id="" class="form-control" autocomplete="off" name=""
+										ng-model="endTime">
+								</div>
+
+							</div>
+							<div class="text-center">
+								<button type="button" class="btn btn-primary2" ng-click="findPatientsToSendKOS()">Tarih İle Bul</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		
+		<div class="row">
+			<div class="col-md-12 text-center">
+				<strong>ECOPACS</strong> <br /> 2010
+				Copyright by ABASUS
+			</div>
+		</div>
+
+	</section>
+
+	<section ng-show="!showQuery">
+		<div class="col-md-12">
+			
+			
+			 <i class="pe-7s-close fa-10x pull-right font-light" ng-click="showQuery=true" style="cursor: pointer;"></i>
+			
+			 <button type="button" class="btn btn-success " ng-click="sendAllPatientToSend(pu)">
+									<i class="pe-7s-edit"></i><span style="padding-left: 5px;">Tümünü Gönder</span>
+								</button>
+								
+			
+			
+		</div>
+		<div class="hpanel ptboss-container">
+			<div class="panel-body">
+		<select class="input-lg pull-right" ng-model="production">
+			  <option value="0">TEST ORTAMI</option>
+			  <option value="1">GERÇEK ORTAM</option>
+			</select>
+				<table class="table table-stripped">
+					<thead>
+						<th>Ad</th>
+						<th>Doğum Tarihi</th>
+						<th class="hidden-xs">Tarih</th>
+						<th class="hidden-xs">Çekim Yeri</th>
+						<th class="hidden-xs">Durum</th>
+						<th>İşlem</th>
+					</thead>
+					<tbody>
+
+						<tr ng-repeat="pu in patients">
+							<td>{{pu.patName}}</td>
+							<td>{{pu.patBirthday|date:dateFormat}}</td>
+							<td>{{pu.modality}}</td>
+							<td class="hidden-xs">{{pu.createTime|date:dateFormat}}</td>
+							<td class="hidden-xs">{{pu.statu}}</td>
+							<td><button type="button" class="btn btn-success " ng-click="sendPatientToSend(pu)">
+									<i class="pe-7s-edit"></i><span style="padding-left: 5px;">KOS Gönder</span>
+								</button></td>
+
+						</tr>
+
+					</tbody>
+
+
+
+				</table>
+
+			</div>
+		</div>
+
+
+
+
+	</section>
+
+
+</div>

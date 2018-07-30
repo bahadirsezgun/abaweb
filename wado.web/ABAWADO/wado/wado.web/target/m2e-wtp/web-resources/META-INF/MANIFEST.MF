@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: w
+Implementation-Version: 1.0.1-SNAPSHOT-WEB
+Built-By: SONY
+Implementation-Vendor-Id: com.abasus
+Build-Jdk: 1.8.0_161
+Implementation-URL: http://projects.spring.io/spring-boot/wado.web/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+
